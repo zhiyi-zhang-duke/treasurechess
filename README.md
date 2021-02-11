@@ -1,1 +1,1 @@
-# treasurechess💰♔
+# treasurechess $♔$
