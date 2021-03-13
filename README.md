@@ -15,9 +15,10 @@ This website works in tandem with https://github.com/zhiyi-zhang-duke/treasure-c
 This is obviously a react application but it also uses Twitter Bootstrap for efficient div organization.
 
 Some fun javascript libraries I use are:
-typed.js
-chessboard.js
-venobox.js
+
+* typed.js
+* chessboard.js
+* venobox.js
 
 # To dos and Goals
 I intend to make Treasure Chess and full fledged chess study tool. In the near future, you should be able to use Treasure Chess to browse favorite games by different metrics such as: player, elo, opening, tournament, etc.
