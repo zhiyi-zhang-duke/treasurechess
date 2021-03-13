@@ -13,6 +13,7 @@ This website works in tandem with https://github.com/zhiyi-zhang-duke/treasure-c
 
 # Tech stack
 This is obviously a react application but it also uses Twitter Bootstrap for efficient div organization.
+
 Some fun javascript libraries I use are:
 typed.js
 chessboard.js
