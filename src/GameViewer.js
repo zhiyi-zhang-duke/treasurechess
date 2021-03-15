@@ -1,8 +1,9 @@
-import React, { useEffect, useState, setState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {useLocation} from 'react-router-dom';
 
 export default function GameViewer() {
     const[game, setGame] = useState(null)
+    const[moveNum, setMoveNum] = useState(0)
     const { state } = useLocation();
 
     useEffect(() => {
@@ -14,7 +15,38 @@ export default function GameViewer() {
         script.src = "assets/js/gameviewer.js"
         script.async = true;
         document.body.appendChild(script)
-    });
+    }, []);
+
+    const moveForward = (game) => {
+        var movesList = game.moves
+        window.executeMove(movesList[moveNum])
+        if (moveNum !== movesList.length-1){
+            setMoveNum(moveNum+1)
+        }
+    }
+
+    const moveMostForward = () => {
+        var movesList = game.moves
+        var restOfMoves = movesList.slice(moveNum, movesList.length-1)
+        for (var move of restOfMoves){
+            console.log(move)
+            window.executeMove(move)
+        }
+        setMoveNum(movesList.length-1)
+    }
+
+    const moveBackward = (game) => {
+        var movesList = game.moves
+        window.executeMove(movesList[moveNum])
+        if (moveNum != 0){
+            setMoveNum(moveNum-1)
+        }
+    }
+
+    const moveMostBackward = () => {
+        window.resetBoard()
+        setMoveNum(0)
+    }
 
     // Stage 1.3 Duda var. Firouja should have moves
     const renderGameInfo = (game) => {
@@ -63,13 +95,14 @@ export default function GameViewer() {
         )
     }
 
+    // To do: Change the color of list group items as they are clicked
     const renderMovesInfo = (game) => {
         return (
             <>
             <div class="overflow-auto game-moves-list">
                 <ul class="list-group">
                     {game.moves.map(move => (
-                        <li class="list-group-item">{move}</li>
+                        <li class="list-group-item" >{move}</li>
                     ))}
                 </ul>
             </div>
@@ -91,6 +124,14 @@ export default function GameViewer() {
                             ? <h4>No Game Info</h4>
                             : renderGameInfo(game)
                         }
+                        <div class="arrowDiv">
+                            <a class="btn btn-small" onClick={() => moveMostBackward(game)}><i class="fas fa-angle-double-left"></i></a>
+                            {/* Chessboardjs does not support reverting moves */}
+                            {/* To do: Build an array of positions as forward is pressed and revert via position array when hittingbackward */}
+                            {/* <a class="btn btn-small" onClick={() => moveBackward(game)}><i class="fa fa-arrow-left"></i></a> */}
+                            <a class="btn btn-small" onClick={() => moveForward(game)}><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-small" onClick={() => moveMostForward(game)}><i class="fas fa-angle-double-right"></i></a>
+                        </div>
                         <ul class="list-group">
                             {game === null
                                 ? <p>No Moves Info</p>

@@ -32,23 +32,28 @@ export default function Games(){
 
                 <div class="row">
                     {games.map(item => (
+                        
                         <div class="game-box col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" key={item._id["$oid"]}>
-                            <div class="icon-box">
-                            <div class="icon">
-                                <Link to={{
-                                    pathname: "/gameviewer",
-                                    state: {
-                                        game: item
-                                    }
-                                }}>
-                                    <i class="bx bxs-chess"></i>
-                                </Link>
+                            <Link to={{
+                                pathname: "/gameviewer",
+                                state: {
+                                    game: item
+                                }
+                            }}>
+                            <div class="container">
+                                <div class="icon-box">
+                                <div class="icon">
+
+                                        <i class="bx bxs-chess"></i>
+                                </div>
+                                <h4>
+                                    <a href="/">{item.event} {item.stage}</a>
+                                </h4>
+                                <p>{item.white} vs. {item.black}</p>
+                                <p>{item.opening}</p>
+                                </div>
                             </div>
-                            <h4>
-                                <a href="/">{item.event} {item.stage}</a>
-                            </h4>
-                            <p>{item.white} vs. {item.black}</p>
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>

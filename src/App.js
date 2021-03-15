@@ -11,8 +11,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch
 } from "react-router-dom";
 
 import './App.css';
@@ -25,7 +23,7 @@ export default class App extends Component{
       <>
         <Router>
           <Header />
-          <switch>
+          <Switch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -47,7 +45,7 @@ export default class App extends Component{
           <Route path="/contact">
             <Contact />
           </Route>
-          </switch>                                                       
+          </Switch>                                                       
         </Router>
       </>
     );

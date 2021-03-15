@@ -5,6 +5,7 @@ export default function Header(){
     return (
         <>
             <header id="header" className="header-tops header-top">
+                <i class="header-icon-logo fas fa-chess-pawn fa-2x"></i>
                 <div class="container">
                     <nav class="nav-menu d-none d-lg-block">
                         <ul>
