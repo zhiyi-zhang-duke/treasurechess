@@ -78,7 +78,10 @@ var config = {
   position: 'start',
   onDragStart: onDragStart,
   onDrop: onDrop,
-  onSnapEnd: onSnapEnd
+  onSnapEnd: onSnapEnd,
+  moveSpeed: 'slow',
+  snapbackSpeed: 'slow',
+  appearSpeed: 'slow'
 }
 board = Chessboard('jsboard', config)
 

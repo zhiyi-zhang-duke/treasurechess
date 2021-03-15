@@ -9,64 +9,66 @@ export default function Resume() {
 
                     <div class="section-title">
                     <h2>Resume</h2>
-                    <p>Check My Resume</p>
+                    <p>My Professional Experience</p>
                     </div>
 
                     <div class="row">
                     <div class="col-lg-6">
                         <h3 class="resume-title">Sumary</h3>
                         <div class="resume-item pb-0">
-                        <h4>Alice Barkley</h4>
-                        <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+                        <h4>Jack Zhang</h4>
+                        <p><em>Hi there! My name is Jack and I am a highly motivated developer with 8 years of industry
+                             experience developing cutting edge enterprise technology. I pride myself in my ability to problem solve,
+                             learn new technologies, and lead/inspire others.</em></p>
                         <p>
                         <ul>
-                            <li>Portland par 127,Orlando, FL</li>
-                            <li>(123) 456-7891</li>
-                            <li>alice.barkley@example.com</li>
+                            <li>Cary, NC</li>
+                            <li>(402) XXX-XXXX</li>
+                            <li>zhiyi.zhang.duke@gmail.com</li>
                         </ul>
                         </p>
                         </div>
 
                         <h3 class="resume-title">Education</h3>
                         <div class="resume-item">
-                        <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                        <h5>2015 - 2016</h5>
-                        <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                        <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+                        <h4>Duke University</h4>
+                        <h4>Bachelor of Science Computer Science with distinction</h4>
+                        <h5>2009 - 2013</h5>
+                        <p>I graduated with a Compsci BS and a minor in Economics and Statistics. My undergraduate thesis was 
+                            on improving the Undergraduate Education of Duke's Computer Science Department.</p>
                         </div>
                         <div class="resume-item">
-                        <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                        <h5>2010 - 2014</h5>
-                        <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                        <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+                        <h4>Other Personal Projects</h4>
+                        <h5>Flay</h5>
+                        <p>A python flask web application that helps you cook by putting 23,000 plus recipes at your fingertips. 
+                            Flay provides a variety of curated recipes. Search by ingredients or recipe name. All recipe data was scraped via Scrapy.py</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <h3 class="resume-title">Professional Experience</h3>
                         <div class="resume-item">
-                        <h4>Senior graphic design specialist</h4>
-                        <h5>2019 - Present</h5>
-                        <p><em>Experion, New York, NY </em></p>
+                        <h4>Technical Consultant</h4>
+                        <h5>2017 - Present</h5>
                         <p>
                         <ul>
-                            <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                            <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                            <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                            <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                            <li>Developed, maintained and lead development for cloud native automation web application portal for ETL team using flask and docker</li>
+                            <li>Redesigned proprietary python SAS schedule launcher to improve batch execution for SAS customers</li>
+                            <li>Triage complex data processing batch schedules for customers with high value contracts with SAS while maintaining data integrity and ensuring high availability</li>
+                            <li>Implement batch monitoring for new clients and transition data reporting for production readiness</li>
+                            <li>Participate in weekly on call rotation to triage blocker level issues for all SAS clients</li>
                         </ul>
                         </p>
                         </div>
                         <div class="resume-item">
-                        <h4>Graphic design specialist</h4>
-                        <h5>2017 - 2018</h5>
-                        <p><em>Stepping Stone Advertising, New York, NY</em></p>
+                        <h4>Java Tech Lead</h4>
+                        <h5>2013 - 2017</h5>
                         <p>
-                        <ul>
-                            <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                            <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                            <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                            <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-                        </ul>
+                            <ul>
+                                <li>Provide architectural insight into the first web application to be cloud deployable at Fidelity</li>
+                                <li>Lead agile sprints, conducted code reviews, and trained junior developer teams and mentored their development of proof of concept web applications</li>
+                                <li>Developed and maintained highly scalable web application using Java/Spring framework service layer, Backbone.js front end with a MVVM framework</li>
+                                <li>Established continuous integration pipeline for all web application products including sonar code coverage, JUnit testing, and selenium front end testing which improved agile velocity of team by 70%</li>
+                            </ul>
                         </p>
                         </div>
                     </div>

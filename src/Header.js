@@ -30,11 +30,6 @@ export default function Header(){
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink exact activeClassName="active" to="/about">
-                                    About
-                                </NavLink>
-                            </li>
-                            <li>
                                 <NavLink exact activeClassName="active" to="/resume">
                                     Resume
                                 </NavLink>

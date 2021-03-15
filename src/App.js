@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import Header from './Header'
 import Home from './Home'
-import About from './About'
 import Resume from './Resume'
 import Games from './Games'
 import GameViewer from './GameViewer'
@@ -36,9 +35,6 @@ export default class App extends Component{
           <Route path="/openings">
             <Openings />
           </Route>
-          <Route path="/about">
-            <About />
-          </Route>  
           <Route path="/resume">
             <Resume />
           </Route>  

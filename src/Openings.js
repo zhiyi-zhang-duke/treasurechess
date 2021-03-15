@@ -65,7 +65,7 @@ export default function Openings() {
                     <div class="section-title">
                         <h2>Openings</h2>
                         <div class="select">
-                            <select class="selectpicker" name="slct" id="slct" onChange={e => loadGamesData(e.target.value)}>
+                            <select class="opening-picker selectpicker" name="slct" id="slct" onChange={e => loadGamesData(e.target.value)}>
                                 <option select disabled>Choose an opening to study</option>
                                 {openingTypes.map((openingType,index) => (
                                         <option value={openingType} key={index}>{openingType}</option>
@@ -73,9 +73,10 @@ export default function Openings() {
                             </select> 
                         </div>
                     </div>
-
+                    
+                    <br></br>
                     {games === null
-                        ? <p>No opening selected</p>
+                        ? <h2>No opening selected</h2>
                         : renderGamesOfOpening()
                     }
 
