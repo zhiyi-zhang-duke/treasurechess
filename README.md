@@ -27,3 +27,11 @@ Simple interface for replaying a chess game
 An openings page that organizes games by opening, to help chess players quickly view famous games from the opening that they're studying/practicing
 A players page that organizes games by player
 Stockfish engine evaluation
+
+# Resources I used
+https://chessboardjs.com/examples#3004
+https://reactjs.org/docs/conditional-rendering.html
+https://reactjs.org/docs/lists-and-keys.html
+https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e/
+https://www.pluralsight.com/guides/how-to-pass-data-between-react-components
+https://itnext.io/add-state-and-lifecycle-methods-to-function-components-with-react-hooks-8e2bdc44d43d
