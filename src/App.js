@@ -12,39 +12,44 @@ import {
   Route,
 } from "react-router-dom";
 
+import { 
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider, 
+  HttpLink, 
+  from 
+} from "@apollo/client";
+import { onError } from "@apollo/client/link/error";
+
 import './App.css';
 
-export default class App extends Component{
-
-
-  render(){
-    return (
-      <>
-        <Router>
-          <Header />
-          <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/games">
-            <Games />
-          </Route>
-          <Route path="/gameviewer">
-            <GameViewer />
-          </Route>
-          <Route path="/openings">
-            <Openings />
-          </Route>
-          <Route path="/resume">
-            <Resume />
-          </Route>  
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          </Switch>                                                       
-        </Router>
-      </>
-    );
-  }
+export default function App() {
+  return (
+    <>
+      <Router>
+        <Header />
+        <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/games">
+          <Games />
+        </Route>
+        <Route path="/gameviewer">
+          <GameViewer />
+        </Route>
+        <Route path="/openings">
+          <Openings />
+        </Route>
+        <Route path="/resume">
+          <Resume />
+        </Route>  
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        </Switch>                                                       
+      </Router>
+    </>
+  );
 }
 
