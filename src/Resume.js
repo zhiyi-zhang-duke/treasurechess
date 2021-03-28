@@ -47,6 +47,7 @@ export default function Resume() {
                     <div class="col-lg-6">
                         <h3 class="resume-title">Professional Experience</h3>
                         <div class="resume-item">
+                        <h4>SAS Institute</h4>
                         <h4>Technical Consultant</h4>
                         <h5>2017 - Present</h5>
                         <p>
@@ -60,6 +61,7 @@ export default function Resume() {
                         </p>
                         </div>
                         <div class="resume-item">
+                        <h4>Fidelity Investments</h4>
                         <h4>Java Tech Lead</h4>
                         <h5>2013 - 2017</h5>
                         <p>

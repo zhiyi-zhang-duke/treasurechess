@@ -21,7 +21,7 @@ export default function Header(){
                             </li>
                             <li>
                                 <NavLink exact activeClassName="active" to="/gameviewer">
-                                    GameViewer
+                                    Game Viewer
                                 </NavLink>
                             </li>
                             <li>
