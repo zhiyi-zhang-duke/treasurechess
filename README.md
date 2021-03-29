@@ -29,14 +29,18 @@ A players page that organizes games by player
 Stockfish engine evaluation
 
 # Resources I used
-https://chessboardjs.com/examples#3004
+[Chessboard.js](https://chessboardjs.com/examples#3004)
 
-https://reactjs.org/docs/conditional-rendering.html
+[Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
 
-https://reactjs.org/docs/lists-and-keys.html
+[Lists and Keys](https://reactjs.org/docs/lists-and-keys.html))
 
-https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e/
+[Pass props to React Router's Link component v4](https://www.youtube.com/watch?v=nmbX2QL7ZJc)
 
-https://www.pluralsight.com/guides/how-to-pass-data-between-react-components
+[Conditional rendering in React: 9 methods with examples](https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e/)
 
-https://itnext.io/add-state-and-lifecycle-methods-to-function-components-with-react-hooks-8e2bdc44d43d
+[How to Pass Data between React Components](https://www.pluralsight.com/guides/how-to-pass-data-between-react-components)
+
+[Add state and lifecycle methods to Function Components with React Hooks](https://itnext.io/add-state-and-lifecycle-methods-to-function-components-with-react-hooks-8e2bdc44d43d)
+
+[Build a Weather App with React and GraphQL](https://www.youtube.com/watch?v=BABUMRn47iQ)
