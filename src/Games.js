@@ -5,7 +5,6 @@ import { GET_GAMES } from './GraphQL/queries'
 
 export default function Games(){
     // https://ui.dev/react-router-v4-pass-props-to-link/
-    // https://www.youtube.com/watch?v=nmbX2QL7ZJc
     const [games, setGames] = useState([])
     const { error, loading, data } = useQuery(GET_GAMES)
 
@@ -53,7 +52,6 @@ export default function Games(){
                         </div>
                     ))}
                 </div>
-
             </div>
             </section>
         </>
