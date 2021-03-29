@@ -33,7 +33,7 @@ Stockfish engine evaluation
 
 [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
 
-[Lists and Keys](https://reactjs.org/docs/lists-and-keys.html))
+[Lists and Keys](https://reactjs.org/docs/lists-and-keys.html)
 
 [Pass props to React Router's Link component v4](https://www.youtube.com/watch?v=nmbX2QL7ZJc)
 
