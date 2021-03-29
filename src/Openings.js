@@ -1,36 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-
+import { useQuery, useApolloClient } from "@apollo/client";
+import { GET_OPENING_TYPES, GET_GAMES_BY_OPENING } from './GraphQL/queries'
 
 export default function Openings() {
     const [openingTypes, setOpeningTypes] = useState([])
     const [games, setGames] = useState(null)
+    const client = useApolloClient()
 
-    const loadData = async () => {
-        // const response = await fetch("/api/openings", {mode: 'no-cors'});
-        const response = await fetch("/api/openings");
-        const data = await response.json();
-        console.log(data["data"])
-        setOpeningTypes(data["data"]);
-    }
+
+    const openingTypesData = useQuery(GET_OPENING_TYPES)
 
     useEffect(() => {
-        loadData();
-    }, []);
+        if(openingTypesData.data){
+            console.log(openingTypesData.data)
+            setOpeningTypes(openingTypesData.data.openingTypes)
+        }
+    }, [openingTypesData])
 
     const loadGamesData = async (openingType) => {
-        console.log(openingType)
-        const response = await fetch("/api/openings/"+openingType);
-        const data = await response.json();
+        const { data } = await client.query({
+            query: GET_GAMES_BY_OPENING,
+            variables: { openingType: openingType }
+        })
         console.log(data)
-        setGames(data);
-    }
+        setGames(data.gamesByOpening)
+    }        
+
 
     const renderGamesOfOpening = () => {
         return (
             <div class="row">
                 {games.map(item => (
-                    <div class="game-box col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" key={item._id["$oid"]}>
+                    <div class="game-box col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" key={item.id}>
                         <Link to={{
                             pathname: "/gameviewer",
                             state: {
@@ -67,9 +69,9 @@ export default function Openings() {
                         <div class="select">
                             <select class="opening-picker selectpicker" name="slct" id="slct" onChange={e => loadGamesData(e.target.value)}>
                                 <option select disabled>Choose an opening to study</option>
-                                {openingTypes.map((openingType,index) => (
-                                        <option value={openingType} key={index}>{openingType}</option>
-                                    ))}
+                                {openingTypes.filter(ot=>ot).map((openingType,index) => (
+                                    <option value={openingType} key={index}>{openingType}</option>
+                                ))}
                             </select> 
                         </div>
                     </div>

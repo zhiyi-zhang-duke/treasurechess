@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-
+import { useQuery } from "@apollo/client";
+import { GET_GAMES } from './GraphQL/queries'
 
 export default function Games(){
     // https://ui.dev/react-router-v4-pass-props-to-link/
     // https://www.youtube.com/watch?v=nmbX2QL7ZJc
     const [games, setGames] = useState([])
-
-    const loadData = async () => {
-        const response = await fetch("/api/games");
-        // console.log(response)
-        const data = await response.json(); 
-        setGames(data);
-        // console.log(data);
-        // console.log(data[0]["moves"])
-    }
+    const { error, loading, data } = useQuery(GET_GAMES)
 
     useEffect(() => {
-        loadData();
-    }, []);
+        if(data){
+            console.log(data)
+            setGames(data.games)
+        }
+    }, [data]);
 
     return (
         <>
@@ -33,7 +29,7 @@ export default function Games(){
                 <div class="row">
                     {games.map(item => (
                         
-                        <div class="game-box col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" key={item._id["$oid"]}>
+                        <div class="game-box col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" key={item.id}>
                             <Link to={{
                                 pathname: "/gameviewer",
                                 state: {
